@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "877286127341",
+    "project_id": "mie-c4e10",
+    "storage_bucket": "mie-c4e10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877286127341:android:78405b5fdb0d1cd2befee4",
+        "android_client_info": {
+          "package_name": "com.example.m1negree"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "877286127341-gje1e0h84utodjflcj7socaquu7uqa44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA29hDigG7nK29LzY1DrpjctqU6iCHAvf0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "877286127341-gje1e0h84utodjflcj7socaquu7uqa44.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

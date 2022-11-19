@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-
+import 'package:firebase_core/firebase_core.dart';
 import 'login_screen_2.dart';
 import 'register.dart';
 import 'screen/home_screen.dart';
 
-void main() => runApp(new MyApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
+  runApp(new MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override

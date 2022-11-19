@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen2 extends StatelessWidget {
@@ -5,6 +6,16 @@ class LoginScreen2 extends StatelessWidget {
   final Color? backgroundColor2;
   final Color? highlightColor;
   final Color? foregroundColor;
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  @override
+  void dispose{
+    emailController.dispose();
+    passwordController.dispose();
+
+    super.dispose();
+}
 
   LoginScreen2({
     Key? k,
@@ -134,9 +145,7 @@ class LoginScreen2 extends StatelessWidget {
                       child: new FlatButton(
                         padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
                         color: this.highlightColor,
-                        onPressed: () => {
-                          Navigator.pushNamed(context, '/home_screen')
-                        },
+                        onPressed: signin,
                         child: Text(
                           "Log In",
                           style: TextStyle(color: this.foregroundColor),
@@ -197,4 +206,11 @@ class LoginScreen2 extends StatelessWidget {
       ),
     );
   }
+}
+
+Future signin() async{
+  await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password){
+    email: emailController.text.trim();
+    password: passwordController.text.trim();
+}
 }
